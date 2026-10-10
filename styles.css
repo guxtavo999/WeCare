@@ -1,88 +1,92 @@
 * {
-    font-family: "Montserrat", sans-serif;
-    padding: 0px;
-    margin: 0px;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-a {
-    font-weight: 600;
-    font-size: 24px;
-    color: #989D9C;
-    margin-right: 23px;
+body {
+    overflow-x: hidden;
 }
 
 header {
-    margin: 44px 0 0 76px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 44px 5%;
+}
+
+a {
+    color: #989D9C;
+    font-size: clamp(14px, 1.25vw, 24px);
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 .login {
-    font-weight: 600;
-    font-size: 24px;
-    background: #665AE1;
-    border: none;
-    border-radius: 20.5px;
     width: 130px;
     height: 41px;
+    border: none;
+    border-radius: 20.5px;
+    background: #665AE1;
     color: white;
     cursor: pointer;
-}
-
-.girl {
-    width: 568px;
-    height: 500px;
-    margin: 217px 86px 183px 125px;
-}
-
-h1 {
-    font-weight: 900;
-    font-size: 100px;
-    width: 513px;
-    height: 122px;
-    color: #515151;
-    margin: 217px 0 0px 0px;
-}
-
-h2 {
-    font-weight: 500;
-    font-size: 58px;
-    width: 448px;
-    height: 71px;
-    color: #515151;
-}
-
-.lorem {
-    font-weight: 400;
-    font-size: 24px;
-    width: 515px;
-    height: 87px;
-    color: #848484;
-}
-
-.explore {
-    background:#ADFF00;
-    width: 239px;
-    height: 64px;
-    border: none;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-.itens {
-    margin-right: 148px;
-    margin-left: 86px;
-}
-
-p {
-    margin-top: 32px;
-    margin-bottom: 120px;
-
+    font-size: clamp(14px, 1.25vw, 24px);
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 .wrapper {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(24px, 5vw, 86px);
+    width: min(1200px, 90%);
+    margin: clamp(48px, 11vw, 150px) auto 40px;
+}
+
+.girl {
+    display: block;
+    width: min(48%, 568px);
+    height: auto;
+    object-fit: contain;
+}
+
+.itens {
+    flex: 1;
+    min-width: 0;
+}
+
+h1 {
+    color: #515151;
+    font-size: clamp(52px, 6vw, 100px);
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+h2 {
+    color: #515151;
+    font-size: clamp(30px, 3.5vw, 58px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.lorem {
+    margin: 24px 0 40px;
+    color: #848484;
+    font-size: clamp(16px, 1.25vw, 24px);
+    line-height: 1.5;
+}
+
+.explore {
+    width: 239px;
+    min-height: 64px;
+    border: none;
+    border-radius: 25px;
+    background: #ADFF00;
+    cursor: pointer;
+    font-size: clamp(20px, 1.5vw, 28px);
+    font-weight: 700;
 }
 
 @media screen and (max-width: 900px) {
@@ -91,51 +95,47 @@ p {
     }
 
     .wrapper {
-        display: block;
+        flex-direction: column;
+        gap: 28px;
+        width: calc(100% - 40px);
+        margin: 28px auto 48px;
     }
-    .girl { 
-        padding: 0;
-        margin: 0;
-        height: 317px;
-        width: 354px;
-        margin-top: 149px;
-        margin-right: 22px;
-        margin-left: 14px;
+
+    .girl {
+        width: min(100%, 568px);
+        max-height: 45vh;
     }
 
     .itens {
-        padding: 0;
-        margin: 0;
-        width: auto;
-        height: auto;
+        flex: none;
+        width: 100%;
+        text-align: center;
     }
 
     h1 {
-        margin: 0;
-        padding: 0;
-        height: auto;
-        font-weight: 900;
-        font-size: 50px;
-        margin: 24px 63px 0 60px;
-    }
-
-    p {
-        display: none;
-
+        font-size: clamp(42px, 10vw, 64px);
     }
 
     h2 {
-        margin: 0;
-        padding: 0;
-        font-weight: 500;
-        font-size: 30px;
-        margin: 7px 79px 0px;
-        height: auto;
+        font-size: clamp(26px, 6vw, 38px);
+    }
+
+    .lorem {
+        margin: 16px 0 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wrapper {
+        width: calc(100% - 32px);
+        margin-top: 20px;
+    }
+
+    .girl {
+        max-height: 38vh;
     }
 
     .explore {
-        margin: 0;
-        padding: 0;
-        margin: 17px 75px 133px 76px;
+        width: min(239px, 100%);
     }
 }

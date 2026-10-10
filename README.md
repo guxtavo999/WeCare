@@ -11,5 +11,5 @@
 <p>
 Esse foi mais um dos projetos que tive que fazer no curso DevClub e com ajuda de IA consegui deixar o site bem responsivo e adaptável a qualquer tela. O resultado está logo abaixo:
 </p>
-<img src="" />
-<img src="" />
+<img src="https://github.com/guxtavo999/WeCare/blob/master/WeCarePC.png?raw=true" />
+<img src="https://github.com/guxtavo999/WeCare/blob/master/WeCareCell.png?raw=true" />
